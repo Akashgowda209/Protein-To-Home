@@ -8,11 +8,11 @@
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">🥩 Protein To Home</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- NAV LINKS -->
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="product.html">Products</a>
@@ -20,21 +20,55 @@
     <a href="contact.html">Contact</a>
   </div>
 </div>
+
+<!-- HERO -->
 <div class="hero">
-  <h1>Products</h1>
+  <h1>Our Products</h1>
 </div>
 
 <!-- PRODUCTS -->
-<div class="product-grid" id="productList">
-  <b>Muscle Build ⭐ MOST POPULAR</b><br>
-500g Chicken + 4 Eggs / Day<br>
-<span class="price">₹7,200 / Month</span>
+<div class="product-grid">
+
+  <div class="info-card">
+    <h3>Chicken Breast – 250g</h3>
+    <p class="price">₹110</p>
+    <a href="order_product.html" class="contact-btn">Order Now</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Chicken Breast – 500kg</h3>
+    <p class="price">₹210</p>
+    <a href="order_product.html" class="contact-btn">Order Now</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Chicken Breast – 250g + 5 Eggs</h3>
+    <p class="price">₹145</p>
+    <a href="order_product.html" class="contact-btn">Order Now</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Chicken Breast – 500kg + 10 Eggs</h3>
+    <p class="price">₹280</p>
+    <a href="order_product.html" class="contact-btn">Order Now</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Eggs – 30 Pack</h3>
+    <p class="price">₹210</p>
+    <a href="order_product.html" class="contact-btn">Order Now</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Eggs – 50 Pack</h3>
+    <p class="price">₹360</p>
+    <a href="order_product.html" class="contact-btn">Order Now</a>
+  </div>
+
 </div>
 
 <footer>© 2025 Protein To Home. All Rights Reserved.</footer>
 
-<!-- SCRIPT MUST BE AT BOTTOM -->
-<script src="product.js"></script>
 <script>
   function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
@@ -43,6 +77,3 @@
 
 </body>
 </html>
-
-
-
