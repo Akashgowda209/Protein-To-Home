@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Subscription | Protein To Home</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">🥩 Protein To Home</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-  <!-- NAV LINKS -->
   <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="product.html">Products</a>
@@ -20,18 +21,52 @@
     <a href="contact.html">Contact</a>
   </div>
 </div>
+
+<!-- HERO -->
 <div class="hero">
   <h1>Subscription Plans</h1>
 </div>
 
-<div class="product-grid" id="subscriptionList"></div>
+<!-- SUBSCRIPTION GRID -->
+<div class="product-grid">
 
-<script src="subscription.js"></script>
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
+  <div class="info-card">
+    <h3>Weekly Plan</h3>
+    <p>500g Chicken / Day</p>
+    <p class="price">₹1,400</p>
+    <a href="order_subscription.html" class="contact-btn">Select Plan</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Weekly Plan + Eggs</h3>
+    <p>500g Chicken + 5 Eggs / Day</p>
+    <p class="price">₹1,750</p>
+    <a href="order_subscription.html" class="contact-btn">Select Plan</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Monthly Plan</h3>
+    <p>500g Chicken / Day</p>
+    <p class="price">₹5,800</p>
+    <a href="order_subscription.html" class="contact-btn">Select Plan</a>
+  </div>
+
+  <div class="info-card">
+    <h3>Monthly Plan + Eggs</h3>
+    <p>500g Chicken + 5 Eggs / Day</p>
+    <p class="price">₹6,350</p>
+    <a href="order_subscription.html" class="contact-btn">Select Plan</a>
+  </div>
+
+</div>
+
 <footer>© 2025 Protein To Home. All Rights Reserved.</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
