@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Order</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">🥩 Protein To Home</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <!-- NAV LINKS -->
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="subscription.html">Subscription</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero small-hero">
+  <h1>Daily Fresh Chicken</h1>
+  <p>Perfect protein for gym & fitness lifestyle</p>
+</section>
+
+<!-- ORDER FORM -->
+<section class="order-section">
+  <h2>Product Order</h2>
+
+  <div class="order-card">
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Mobile Number</label>
+    <input type="tel" id="phone" placeholder="Enter mobile number">
+
+    <label>Product</label>
+    <input type="text" id="product" readonly>
+
+    <label>Delivery Address</label>
+    <textarea id="address" placeholder="Enter delivery address"></textarea>
+
+    <button onclick="placeOrder()">Place Your Order</button>
+  </div>
+</section>
+
+<script>
+/* Auto-fill selected product */
+document.getElementById("product").value =
+  localStorage.getItem("selectedProduct") || "";
+
+/* WhatsApp Order */
+function placeOrder(){
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const product = document.getElementById("product").value;
+  const address = document.getElementById("address").value;
+
+  if(!name || !phone || !address){
+    alert("Please fill all details");
+    return;
+  }
+
+  const msg =
+`Product Order:
+Name: ${name}
+Phone: ${phone}
+Product: ${product}
+Address: ${address}`;
+
+  window.open(
+    "https://wa.me/917483408060?text=" + encodeURIComponent(msg),
+    "_blank"
+  );
+}
+</script>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>

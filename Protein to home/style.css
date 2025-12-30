@@ -1,0 +1,1118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f5f6f7;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #0b3d2e;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(180deg, #0b3d2e, #1b6b3f);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.features {
+  margin: 30px 0;
+}
+
+.feature {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  padding: 10px 18px;
+  border-radius: 25px;
+  margin: 8px;
+  font-size: 14px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background: #f1c40f;
+  color: #000;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* ===== SECTION ===== */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  color: #1b6b3f;
+  margin-bottom: 30px;
+}
+
+/* ===== CARDS ===== */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  color: #1b6b3f;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.card button {
+  background: #1b6b3f;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* ===== CONTACT ===== */
+.contact-box {
+  background: #fff;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.contact-box h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+/* ===== ADMIN BUTTONS ===== */
+.admin-btn {
+  background: #0b3d2e;
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  background: #1b6b3f;
+  transform: translateY(-2px);
+}
+
+/* ================= ADMIN DASHBOARD CARDS ================= */
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 40px 60px;
+}
+
+.admin-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.admin-card h3 {
+  color: #0b3d2e;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.admin-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* ========== ADMIN PAGE BASE ========== */
+.admin-page {
+  background: #f6f9f7;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== NAVBAR ========== */
+.admin-navbar {
+  background: #0b3d2e;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.admin-navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.admin-navbar .logo span {
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.admin-nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.admin-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.admin-nav-links a:hover {
+  color: #ffd700;
+}
+
+.logout {
+  color: #ffcccc;
+}
+
+/* ========== WELCOME SECTION ========== */
+.admin-welcome {
+  padding: 50px 40px 20px;
+}
+
+.admin-welcome h1 {
+  font-size: 36px;
+  color: #0b3d2e;
+  margin-bottom: 10px;
+}
+
+.admin-welcome p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* ========== CARDS ========== */
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 40px 60px;
+}
+
+.admin-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.admin-card h3 {
+  color: #0b3d2e;
+  margin-bottom: 10px;
+}
+
+.admin-card p {
+  color: #555;
+  line-height: 1.6;
+}
+.page-title {
+  text-align: center;
+  color: #0b3d2e;
+  margin: 30px;
+}
+
+.form-card {
+  width: 350px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.form-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.form-card button {
+  background: #0b3d2e;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+}
+
+.admin-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: #0b3d2e;
+  color: white;
+  padding: 15px;
+}
+
+.admin-table td {
+  padding: 15px;
+  text-align: center;
+}
+
+.edit-btn {
+  background: #ffb703;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background: #d62828;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.product-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product-card button {
+  margin-top: 10px;
+  background: #0b3d2e;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+/* ===== ORDER PAGE ===== */
+.order-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.order-section h2 {
+  color: #145a32;
+  margin-bottom: 30px;
+}
+
+.order-card {
+  max-width: 420px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.order-card label {
+  font-weight: 600;
+  display: block;
+  margin: 12px 0 6px;
+}
+
+.order-card input,
+.order-card textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.order-card textarea {
+  resize: none;
+  height: 80px;
+}
+
+.order-card button {
+  margin-top: 20px;
+  width: 100%;
+  background: #145a32;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Small hero */
+.small-hero {
+  padding: 40px 20px;
+}
+.back-btn {
+  background: #0b3d2e;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+
+/* WHY & PLAN SECTIONS */
+.why-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8f9f8;
+}
+
+.why-section h2 {
+  color: #0b5d2e;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.info-card h3 {
+  color: #0b5d2e;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* PROTEIN HIGHLIGHT */
+.protein-highlight {
+  background: #eaf7ea;
+  padding: 70px 20px;
+  text-align: center;
+  border-radius: 24px;
+  margin: 60px 20px;
+}
+
+.protein-highlight h2 {
+  color: #0b5d2e;
+  margin-bottom: 15px;
+}
+
+.protein-highlight p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.protein-highlight ul {
+  list-style: none;
+  padding: 0;
+}
+
+.protein-highlight li {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(180deg, #0b3d2e, #0e5c36);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background: #ffd400;
+  color: #000;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.back-btn {
+  background: #0b3d2e;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.admin-back-wrapper {
+  text-align: center;
+  margin: 30px 0;
+}
+/* Make Select Plan same size as input boxes */
+.order-card select {
+  width: 100%;
+  height: 52px;              /* same as input */
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  appearance: none;          /* clean modern look */
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+   PERFECT MOBILE LAYOUT FIX
+================================ */
+@media (max-width: 768px) {
+
+  /* FORCE SINGLE COLUMN EVERYWHERE */
+  .card-grid,
+  .product-grid,
+  .admin-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+  }
+
+  /* FULL-WIDTH CARDS */
+  .info-card,
+  .product-card,
+  .admin-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  /* WHY + PLAN SECTIONS */
+  .why-section {
+    padding: 40px 14px;
+  }
+
+  .why-section h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  /* PROTEIN HIGHLIGHT BOX */
+  .protein-highlight {
+    margin: 30px 12px;
+    padding: 30px 16px;
+    border-radius: 16px;
+  }
+
+  .protein-highlight h2 {
+    font-size: 20px;
+  }
+
+  .protein-highlight p {
+    font-size: 14px;
+  }
+
+  .protein-highlight li {
+    font-size: 14px;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    padding: 50px 16px;
+  }
+
+  .cta-section h2 {
+    font-size: 22px;
+  }
+
+  .cta-section p {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+
+
+/* ===============================
+   FORCE PERFECT MOBILE VIEW
+   DO NOT PUT ABOVE ANYTHING
+================================ */
+@media screen and (max-width: 768px) {
+
+  /* BREAK ALL GRIDS */
+  .card-grid,
+  .product-grid,
+  .admin-cards {
+    display: block !important;
+  }
+
+  /* FORCE EACH CARD FULL WIDTH */
+  .info-card,
+  .product-card,
+  .admin-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  /* REMOVE SIDE SPACING ISSUE */
+  .why-section,
+  .protein-highlight {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* TEXT SIZES */
+  .why-section h2,
+  .protein-highlight h2 {
+    font-size: 20px !important;
+  }
+
+  .info-card p,
+  .protein-highlight p,
+  .protein-highlight li {
+    font-size: 14px !important;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 40px 14px !important;
+  }
+
+  .cta-btn {
+    width: 100% !important;
+    max-width: 260px;
+  }
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   HAMBURGER MENU
+================================ */
+
+/* HIDE HAMBURGER ON DESKTOP */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: block;
+  }
+
+  /* HIDE LINKS INITIALLY */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #0b5d2e;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+  }
+
+  /* ACTIVE MENU */
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+/* CONTACT PAGE */
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  color: #0b5d2e;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  color: #555;
+  margin: 6px 0;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.contact-btn {
+  background: #0b5d2e;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.contact-btn.whatsapp {
+  background: #25d366;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin: 6px 0;
+}
+.contact-card ul {
+  padding-left: 18px;
+}
+
+.contact-card strong {
+  color: #0b5d2e;
+}
+
+
+
+
+
+/* =====================================
+   CONTACT PAGE – FINAL MOBILE FIX
+===================================== */
+@media (max-width: 768px) {
+
+  /* FORCE SINGLE COLUMN */
+  .contact-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+
+  /* FULL WIDTH CARDS */
+  .contact-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 18px !important;
+    box-sizing: border-box;
+  }
+
+  /* TEXT SIZES */
+  .contact-card h3 {
+    font-size: 18px !important;
+  }
+
+  .contact-card p,
+  .contact-card li {
+    font-size: 14px !important;
+    line-height: 1.6;
+  }
+
+  /* BUTTONS STACK */
+  .contact-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+
+  .contact-btn {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* NAV MENU MOBILE */
+  .nav-links {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    background: #0b5d2e;
+    z-index: 999;
+  }
+}
+/* ===============================
+   CONTACT PAGE STYLES
+================================ */
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  color: #0b5d2e;
+  margin-bottom: 10px;
+}
+
+.contact-card p,
+.contact-card li {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.contact-list {
+  padding-left: 18px;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.contact-btn {
+  background: #0b5d2e;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.contact-btn.whatsapp {
+  background: #25d366;
+}
+
+/* ===============================
+   MOBILE FIX (CRITICAL)
+================================ */
+@media (max-width: 768px) {
+
+  .contact-section {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 16px !important;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0b5d2e;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+.policy-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.policy-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.policy-card h3 {
+  color: #0b5d2e;
+  margin-bottom: 8px;
+}
+
+.policy-card ul {
+  padding-left: 18px;
+}
+
+.policy-card li {
+  margin-bottom: 6px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .policy-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   ADMIN LOGIN PAGE
+================================ */
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0b3d2e, #145a32);
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.login-card {
+  max-width: 380px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.login-card h1 {
+  color: #145a32;
+  margin-bottom: 5px;
+}
+
+.login-subtitle {
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.login-card label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #1e8f3a;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: #1e8f3a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #166f2d;
+}
+
+.error-msg {
+  margin-top: 15px;
+  color: red;
+  font-size: 14px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login | Protein To Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-login-page">
+
+  <div class="login-container">
+    <div class="login-card">
+
+      <h1>🔐 Admin Login</h1>
+      <p class="login-subtitle">Protein To Home – Admin Panel</p>
+
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter admin username">
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter password">
+
+      <button onclick="adminLogin()">Login</button>
+
+      <p class="error-msg" id="errorMsg"></p>
+
+    </div>
+  </div>
+
+<script>
+  function adminLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMsg = document.getElementById("errorMsg");
+
+    // CHANGE THESE VALUES
+    const ADMIN_USER = "Deepuanna";
+    const ADMIN_PASS = "DKShiva";
+
+    if (username === ADMIN_USER && password === ADMIN_PASS) {
+      localStorage.setItem("adminLoggedIn", "true");
+      window.location.href = "admin.html"; // your dashboard
+    } else {
+      errorMsg.textContent = "❌ Invalid username or password";
+    }
+  }
+</script>
+
+</body>
+</html>

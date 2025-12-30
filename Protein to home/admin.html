@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="admin-page">
+
+<!-- ADMIN NAVBAR -->
+<header class="admin-navbar">
+  <div class="logo">
+    Protein To Home <span>Admin</span>
+  </div>
+
+  <nav class="admin-nav-links">
+    <a href="admin.html">Home</a>
+    <a href="manage_product.html">Product Management</a>
+    <a href="manage_subscription.html">Subscription Management</a>
+    <a href="admin_login.html" class="logout">Logout</a>
+  </nav>
+</header>
+
+<!-- WELCOME SECTION -->
+<section class="admin-welcome">
+  <h1>Welcome, Admin 👋</h1>
+  <p>Manage products, subscriptions, and daily deliveries from here.</p>
+</section>
+
+<!-- ADMIN INFO BOXES -->
+<section class="admin-cards">
+
+  <div class="admin-card">
+    <h3>Product Management</h3>
+    <p>Add, update, or remove chicken, eggs, and protein items.</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>Subscription Management</h3>
+    <p>View daily, weekly, and monthly customer subscriptions.</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>Delivery Overview</h3>
+    <p>Check morning & evening delivery schedules.</p>
+  </div>
+
+  <div class="admin-card">
+    <h3>Revenue Tracking</h3>
+    <p>Monitor subscription-based income and growth.</p>
+  </div>
+
+</section>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+
+</body>
+</html>

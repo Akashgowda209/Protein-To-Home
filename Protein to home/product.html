@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products | Protein To Home</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">🥩 Protein To Home</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <!-- NAV LINKS -->
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="subscription.html">Subscription</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+<div class="hero">
+  <h1>Products</h1>
+</div>
+
+<!-- PRODUCTS -->
+<div class="product-grid" id="productList"></div>
+
+<footer>© 2025 Protein To Home. All Rights Reserved.</footer>
+
+<!-- SCRIPT MUST BE AT BOTTOM -->
+<script src="product.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>

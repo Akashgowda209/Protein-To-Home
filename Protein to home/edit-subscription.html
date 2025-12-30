@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Subscription</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="admin-page">
+
+<h1 class="page-title">✏️ Edit Subscription</h1>
+
+<div class="form-card">
+  <label>Plan Name</label>
+  <input type="text" id="planName">
+
+  <label>Duration</label>
+  <input type="text" id="planDuration">
+
+  <label>Quantity</label>
+  <input type="text" id="planQuantity">
+
+  <label>Price (₹)</label>
+  <input type="number" id="planPrice">
+
+  <button onclick="updateSubscription()">Update</button>
+</div>
+
+<div style="text-align:center; margin-top:30px;">
+  <button class="back-btn" onclick="goBack()">← Back to subscriptions</button>
+</div>
+
+<script>const subscriptions = JSON.parse(localStorage.getItem("subscriptions")) || [];
+const index = localStorage.getItem("editSubscriptionIndex");
+
+const nameInput = document.getElementById("planName");
+const durationInput = document.getElementById("planDuration");
+const quantityInput = document.getElementById("planQuantity");
+const priceInput = document.getElementById("planPrice");
+
+/* Load selected subscription */
+if (subscriptions[index]) {
+  nameInput.value = subscriptions[index].name;
+  durationInput.value = subscriptions[index].duration;
+  quantityInput.value = subscriptions[index].quantity;
+  priceInput.value = subscriptions[index].price;
+}
+
+/* Update subscription */
+function updateSubscription() {
+  const name = nameInput.value;
+  const duration = durationInput.value;
+  const quantity = quantityInput.value;
+  const price = priceInput.value;
+
+  if (!name || !duration || !quantity || !price) {
+    alert("Fill all fields");
+    return;
+  }
+
+  subscriptions[index] = { name, duration, quantity, price };
+  localStorage.setItem("subscriptions", JSON.stringify(subscriptions));
+
+  window.location.href = "manage_subscription.html";
+}
+
+/* Back */
+function goBack() {
+  window.location.href = "manage_subscription.html";
+}
+</script>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
