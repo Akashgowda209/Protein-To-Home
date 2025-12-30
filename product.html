@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Products | Protein To Home</title>
-  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <div class="logo">🥩 Protein To Home</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-  <!-- NAV LINKS -->
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="product.html">Products</a>
-    <a href="subscription.html">Subscription</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
-<div class="hero">
-  <h1>Products</h1>
 </div>
 
-<!-- PRODUCTS -->
-<div class="product-grid" id="productList"></div>
+<h2 class="page-title">Our Products</h2>
 
-<footer>© 2025 Protein To Home. All Rights Reserved.</footer>
+<!-- PRODUCT LIST -->
+<div id="productList" class="product-grid"></div>
 
-<!-- SCRIPT MUST BE AT BOTTOM -->
-<script src="product.js?v=2"></script>
+<!-- INLINE SCRIPT (NO JS FILE) -->
 <script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
+  const products = [
+    { name: "Chicken Breast 500g", price: 340 },
+    { name: "Chicken Breast 1kg", price: 650 },
+    { name: "Eggs (30 pcs)", price: 210 }
+  ];
+
+  const container = document.getElementById("productList");
+
+  products.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <h3>${p.name}</h3>
+      <p class="price">₹${p.price}</p>
+      <button onclick="orderProduct('${p.name}', ${p.price})">
+        Order
+      </button>
+    `;
+    container.appendChild(card);
+  });
+
+  function orderProduct(name, price) {
+    const msg =
+`Product Order
+Product: ${name}
+Price: ₹${price}`;
+
+    window.open(
+      "https://wa.me/918310405828?text=" + encodeURIComponent(msg),
+      "_blank"
+    );
   }
 </script>
 
 </body>
 </html>
-
